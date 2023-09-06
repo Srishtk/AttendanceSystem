@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <!--Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: #74EBD5;
+background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+
+        }
+        .table {
+
+         border-collapse: separate;
+         padding: 20px;
+}
+    </style>
+</head>
+<body>
+    <h2 class="text-center fs-1 fw-bold mt-3">ADMIN PORTAL</h2>
+    <table class="table w-50 mt-5 mx-auto text-center table-bordered table-hover">
+        <caption class="fw-bold fs-4">List of present users</caption>
+        <thead>
+        <tr class="thead-dark">
+            <th>ID</th>
+            <th>User Name</th>
+            <th>Time of Attendance</th>
+        </tr>
+        </thead>
+        <tbody>
+        {%for at in at_list %}
+        <tr>
+            <td>{{ at.userId }}</td>
+            <td>{{ at.userName}}</td>
+            <td>{{ at.AttendanceTime }}</td>
+        </tr>
+        {%endfor%}
+        </tbody>
+
+    </table>
+
+    <div>
+        <form method="post" action="/admin_redirect">
+            <input type="submit" value="Add a User" name="action" class="btn btn-dark fs-5  p-3 m-5">
+        <input type="submit" value="Home" name="action" class="btn btn-dark fs-5  p-3 m-5">
+        </form>
+    </div>
+</body>
