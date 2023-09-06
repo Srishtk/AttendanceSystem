@@ -17,17 +17,15 @@ The **Attendance System using Face Recognition** is designed to streamline atten
 ## Prerequisites
 
 - Python 3.x installed
+
 ## Installation
 
- Clone the repository:
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/yourusername/attendance-system.git
    cd attendance-system
-   
--You can install project dependencies by:
+2. Install project dependencies:
 
-pip install -r requirements.txt
-
-
-
+   ```bash
+   pip install -r requirements.txt
