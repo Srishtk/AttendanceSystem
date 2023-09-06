@@ -23,8 +23,8 @@ The **Attendance System using Face Recognition** is designed to streamline atten
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/attendance-system.git
-   cd attendance-system
+   git clone https://github.com/Srishtk/AttendanceSystem.git
+   cd AttendanceSystem
 2. Install project dependencies:
 
    ```bash
